@@ -17,7 +17,7 @@ body {
 }
 
 .mentor-container {
-  margin-top: 40px !important;
+  margin-top: 80px !important;
   margin: auto;
 }
 
@@ -34,7 +34,7 @@ body {
   width: 100%;
 }
 
-
+/* Hide scrollbars */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -62,7 +62,7 @@ ul.images {
 
 ul.images li {
   flex: 0 0 auto;
-  width: 100vw;
+  width: auto;
   height: auto;
   margin-right: 5px;
 }
@@ -72,8 +72,8 @@ ul.images li:not(:last-child) {
 }
 
 ul.images li img {
-  width: 100%;
-  height: auto;
+  width: 70rem;
+  height: 40rem;
   object-fit: fit;
   
 }
