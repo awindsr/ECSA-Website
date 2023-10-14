@@ -32,15 +32,15 @@
     <div class="logo">
       <img src="assets/images/logo.png">
     </div>
-    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <a href="#menu" class="menu-link" onclick="toggleMenuItems()"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="./index.html" rel="sponsored" class="external">Home</a></li>
         <li class="has-submenu"><a href="index.html#section2" rel="sponsored" class="external">About Us</a>
           <ul class="sub-menu">
             <li><a href="./index.html#section2" rel="sponsored" class="external">Who we are?</a></li>
-            <li><a href="./index.html#section3" rel="sponsored" class="external">What we do?</a></li>
-            <li><a href="./index.html#section3" rel="sponsored" class="external">Membership</a></li>
+            <li><a href="./index.html#section2" rel="sponsored" class="external">What we do?</a></li>
+            <li><a href="./index.html#section2" rel="sponsored" class="external">Membership</a></li>
             <li><a href="https://forms.gle/jb2dPLwHFQ1uG87U6" rel="sponsored" class="external">LMS</a></li>
           </ul>
         <li><a href="#">Execom</a></li>
@@ -186,6 +186,17 @@
     $(window).scroll(function () {
       checkSection();
     });
+
+    function toggleMenuItems() {
+      const menuItems = document.querySelectorAll('.main-menu li');
+      menuItems.forEach((menuItem) => {
+          if (menuItem.style.display === 'none' || menuItem.style.display === '') {
+              menuItem.style.display = 'block';
+          } else {
+              menuItem.style.display = 'block';
+          }
+      });
+    }
   </script>
 <script src="./assets/js/telgram_msg.js"></script>
 

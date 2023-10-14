@@ -35,14 +35,14 @@
       <img src="assets/images/logo.png">
       <img src="assets/images/logo2.png">
     </div>
-    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <a href="#menu" class="menu-link" onclick="toggleMenuItems()"><i class="fa fa-bars" ></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu" id="main-menu">
         <li><a href="#section1">Home</a></li>
         <li class="has-submenu"><a href="#section2">About Us</a>
           <ul class="sub-menu">
             <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
+            <li><a href="#section2">What we do?</a></li>
             <li><a href="#section3">Membership</a></li>
             <li><a href="https://forms.gle/jb2dPLwHFQ1uG87U6" rel="sponsored" class="external">LMS</a></li>
           </ul>
@@ -595,6 +595,19 @@ Join us on this exciting journey of exploration, discovery, and innovation. Toge
     $(window).scroll(function () {
       checkSection();
     });
+    function toggleMenuItems() {
+      const menuItems = document.querySelectorAll('.main-menu li');
+      menuItems.forEach((menuItem) => {
+          if (menuItem.style.display === 'none' || menuItem.style.display === '') {
+              menuItem.style.display = 'block';
+          } else {
+              menuItem.style.display = 'block';
+          }
+      });
+    }
+ 
+      
+      
   </script>
 <script src="./assets/js/telgram_msg.js"></script>
 
